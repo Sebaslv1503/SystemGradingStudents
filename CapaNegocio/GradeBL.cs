@@ -15,6 +15,12 @@ namespace CapaNegocio
             GradeDAL dal = new GradeDAL();
             return dal.RegisterGrade(grade);
         }
+        public static decimal GetStudentAverageGrade(int enrollmentId)
+        {
+            GradeDAL dal = new GradeDAL();
+            return dal.GetStudentAverageGrade(enrollmentId);
+        }
+
 
     }
 }

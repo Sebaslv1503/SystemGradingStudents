@@ -16,6 +16,10 @@ namespace Taller1.Controllers
         {
             return View();
         }
+        public IActionResult Enrollments()
+        {
+            return View();
+        }
         public IActionResult RegisterToCourse()
         {
             StudentBL studentBL = new StudentBL();
@@ -54,6 +58,12 @@ namespace Taller1.Controllers
             return Json(new { success = true, data = enrollments });
         }
 
+        [HttpGet]
+        public JsonResult GetStudentAverage(int enrollmentId)
+        {
+            var avg = GradeBL.GetStudentAverageGrade(enrollmentId);
+            return Json(new { success = true, average = avg });
+        }
 
 
 
