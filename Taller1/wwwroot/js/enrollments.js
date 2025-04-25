@@ -35,7 +35,7 @@ async function getAverage(enrollmentId) {
 
     if (data.success) {
         averageBox.classList.remove("d-none");
-        averageResult.textContent = `${data.average.toFixed(2)} / 100`;
+        averageResult.textContent = `${data.average.toFixed(2)} / 20`;
     } else {
         averageBox.classList.remove("d-none");
         averageResult.textContent = "Could not fetch average.";
