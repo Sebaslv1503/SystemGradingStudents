@@ -12,6 +12,10 @@ namespace Taller1.Controllers
         {
             return View();
         }
+        public IActionResult Grade()
+        {
+            return View();
+        }
         public IActionResult RegisterToCourse()
         {
             StudentBL studentBL = new StudentBL();
@@ -35,6 +39,22 @@ namespace Taller1.Controllers
             bool success = studentBL.RegisterStudentInCourse(enrollment);
             return Json(new { success = success });
         }
+        [HttpPost]
+        public JsonResult RegisterGrade([FromBody] GradeCLS grade)
+        {
+            GradeBL GradeBL = new GradeBL();
+            bool result = GradeBL.RegisterGrade(grade);
+            return Json(new { success = result });
+        }
+
+        [HttpGet]
+        public JsonResult ListEnrollments()
+        {
+            var enrollments = EnrollmentBL.GetAllEnrollments();
+            return Json(new { success = true, data = enrollments });
+        }
+
+
 
 
     }
