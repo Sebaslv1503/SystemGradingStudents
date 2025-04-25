@@ -1,0 +1,303 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>InterUrbanizaciones</title>
+    <link rel="icon" href="~/Img/Terranova sin fondo.png" type="image/x-icon">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon
+        <link href="img/favicon.ico" rel="icon">
+    -->
+    
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="~/CssMain/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/CssMain/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="~/CssMain/css/style.css" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.2/css/dataTables.dataTables.css" />
+    
+    
+</head>
+<style>
+    .card-estadistica {
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
+
+        .card-estadistica:hover {
+            transform: scale(1.03);
+        }
+
+    .icono-estadistica {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        transition: transform 0.3s;
+    }
+
+    .card-estadistica:hover .icono-estadistica {
+        transform: scale(1.2);
+    }
+
+    .estadisticas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 2rem;
+    }
+    .galardones-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
+/* Contenedor general con bordes redondeados */
+.galardones-section {
+    background: linear-gradient(to right, #f8f9fa, #ffffff);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+/* Títulos estilizados */
+.galardones-section h2,
+.galardones-section h3 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+.card-general{
+    transition: transform 0.3s ease;
+    border: 2px solid #28a74520;
+}
+/* Estilo para cada tarjeta de premio */
+.card-premio {
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+    min-height: 230px;
+    
+    border: 2px solid #28a74520;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.card-premio:hover {
+    transform: scale(1.05);
+}
+
+.card-premio i {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #28a745;
+}
+
+/* Galería de campeones */
+.card-campeon {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 2px solid #34643420;
+}
+
+.card-campeon:hover {
+    transform: scale(1.05);
+}
+
+.card-campeon img {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+    border-bottom: 2px solid #28a74540;
+}
+
+.equal-height {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+
+</style>
+
+<body>
+    
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
+                <a href="" class="navbar-brand">
+                    <img src="~/Img/Terranova sin fondo.png" alt="img" style="width: 220px; height: auto;" />
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a asp-controller="Main" asp-action="Index" class="nav-item nav-link active">Inicio</a>
+                        <a asp-controller="Main" asp-action="Inscripcion" class="nav-item nav-link">Inscripción</a>
+                        <a asp-controller="Estadisticas" asp-action="Partidos" class="nav-item nav-link">Partidos</a>
+                        
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Estadísticas</a>
+                            <div class="dropdown-menu border-0 rounded-0 m-0">
+                                <a asp-controller="Estadisticas" asp-action="TablaPosiciones" class="dropdown-item">Tabla de Posiciones</a>
+                                <a asp-controller="Estadisticas" asp-action="Goleadores" class="dropdown-item">Goleadores</a>
+                                <a asp-controller="Estadisticas" asp-action="Tarjetas" class="dropdown-item">Tarjetas</a>
+                                <a asp-controller="Estadisticas" asp-action="Reglamento" class="dropdown-item">Reglamento</a>
+                                <a asp-controller="Estadisticas" asp-action="Resultados" class="dropdown-item">Resultados</a>
+                                <a asp-controller="Main" asp-action="GalardonPremios" class="dropdown-item">Premios y Campeones</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        @if (Context.Session.GetString("NombreUsuario") == null)
+                        {
+                            <a asp-controller="Usuario" asp-action="Login" class="btn btn-outline-primary">
+                                <i class="fas fa-sign-in-alt me-1"></i> Iniciar Sesión
+                            </a>
+                        }
+                        else
+                        {
+                            <!-- Dropdown Bootstrap 4 con botón circular -->
+                            <div class="dropdown">
+                                <button class="btn btn-light rounded-circle border dropdown-toggle d-flex align-items-center justify-content-center"
+                                        type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                        style="width: 45px; height: 45px;" title="Menú Usuario">
+                                    <i class="fas fa-futbol text-primary"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right shadow-sm" aria-labelledby="dropdownUser">
+                                    <a class="dropdown-item" asp-controller="Equipo" asp-action="Index" >
+                                        <i class="fas fa-users mr-2"></i> Mi Equipo
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-danger"  onclick="cerrarSesion()">
+                                        <i class="fas fa-sign-out-alt mr-2"></i> Cerrar sesión
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+
+
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Navbar End -->
+
+
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @RenderSection("Scripts", required: false)
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 py-5 px-sm-3 px-lg-5" style="margin-top: 90px;">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-md-6 mb-5">
+                <a href="" class="navbar-brand">
+
+                    <img src="~/Img/Terranova sin fondo.png" alt="img" style="width: 300px; height: auto;" />
+
+
+                </a>
+                <p >
+                    © Campeonato de Interurbanizaciones 2024
+                    Organizado por Urbanizacion Terranova
+                </p>
+                <p class="text-justify">
+                    📍 Comprometidos con el deporte, la convivencia y el juego limpio entre Urbanizaciones y Conjuntos
+                </p>
+                <p>
+                    📅 Próxima edición: ¡Muy pronto!
+                </p>
+                <p >
+                    💬 ¿Tienes un equipo y quieres participar? ¡Escríbenos y forma parte del próximo torneo!
+                </p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Follow Us</h6>
+                <div class="d-flex justify-content-start">
+                    
+                    <a class="btn btn-outline-primary btn-square" href="https://www.instagram.com/interurbanizaciones/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            
+            <div class="col-lg-3 col-md-6 mb-5">
+                <h5 class="text-white text-uppercase mb-4" style="letter-spacing: 5px;">Contactanos</h5>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>Capelo</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>0980550502</p>
+                <p><i class="fa fa-envelope mr-2"></i>interurbanizaciones@gmail.com</p>
+                <h6 class="text-white text-uppercase mt-4 mb-3" style="letter-spacing: 5px;">Escribenos</h6>
+                <div class="w-100">
+                    <a href="https://wa.me/521234567890"
+                       class="btn btn-success"
+                       target="_blank"
+                       style="background-color: #25D366; border-color: #25D366;">
+                        <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
+        <div class="row">
+            
+            <div class="col-lg-6 text-center text-md-right">
+                <p class="m-0 text-white-50">
+                    Designed by Sebastian Lasso
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+    <!-- Script -->
+    <!-- JavaScript Libraries -->
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/CssMain/lib/easing/easing.min.js"></script>
+    <script src="~/CssMain/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/CssMain/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="~/CssMain/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="~/CssMain/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="~/CssMain/mail/jqBootstrapValidation.min.js"></script>
+    <script src="~/CssMain/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/CssMain/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+﻿@{
+    ViewData["Title"] = "Inscripcion";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+}
+
+<style>
+    .container-inscripcion {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    .card-inscripcion {
+        background-color: #fdfdfd;
+        border-radius: 15px;
+        border: 1px solid #e3e3e3;
+    }
+
+        .card-inscripcion h1, .card-inscripcion h5 {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+    .content-box {
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid #eaeaea;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .card-inscripcion .list-group-item {
+        background-color: #f8f9fa;
+        border: none;
+        padding-left: 0;
+    }
+</style>
+<!-- Header Start -->
+<div class="container-fluid page-header">
+    <div class="container">
+        <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+            <h3 class="display-4 text-white text-uppercase">Inscripción</h3>
+            <div class="d-inline-flex text-white">
+                <p class="m-0 text-uppercase"><a class="text-white" href="">Inicio</a></p>
+                <i class="fa fa-angle-double-right pt-1 px-3"></i>
+                <p class="m-0 text-uppercase">Inscripción</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header End -->
+
+<div class="container-inscripcion my-5">
+    <div class="card-inscripcion shadow-lg p-5 rounded bg-white">
+
+        <!-- Título -->
+        <div class="text-center mb-4">
+            <h1 class="text-primary fw-bold">
+                <i class="fas fa-futbol me-2"></i> Inscripciones
+            </h1>
+            <h5 class="text-muted">Campeonato Inter Urbanizaciones</h5>
+        </div>
+
+        <!-- Requisitos y pasos -->
+        <div class="row mb-5">
+            <!-- Requisitos -->
+            <div class="col-md-6 mb-4">
+                <div class="content-box border-start border-primary ps-3 mb-4">
+                    <h6 class="text-dark"><i class="fas fa-users me-2"></i> Inscripción Mínima</h6>
+                    <p class="text-muted">Mínimo 10 personas por equipo</p>
+                </div>
+                <div class="content-box border-start border-success ps-3">
+                    <h6 class="text-dark"><i class="fas fa-dollar-sign me-2"></i> Precio</h6>
+                    <p class="text-muted">$8 por persona</p>
+                </div>
+            </div>
+
+            <!-- Pasos -->
+            <div class="col-md-6">
+                <h6 class="text-dark mb-3"><i class="fas fa-list-ul me-2"></i> Pasos a seguir:</h6>
+                <ul class="list-group list-group-flush rounded">
+                    <li class="list-group-item border-0">
+                        <i class="fas fa-check-circle text-success me-2"></i> Realizar el pago según el número de jugadores.
+                    </li>
+                    <li class="list-group-item border-0">
+                        <i class="fas fa-check-circle text-success me-2"></i> Enviar el comprobante al <strong class="text-primary">0980550502</strong>.
+                    </li>
+                    <li class="list-group-item border-0">
+                        <i class="fas fa-check-circle text-success me-2"></i> Se le enviará un <strong class="text-dark">código de inscripción</strong>.
+                    </li>
+                    <li class="list-group-item border-0">
+                        <i class="fas fa-check-circle text-success me-2"></i> Ingrese el código para continuar con la inscripción del equipo y jugadores.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Datos de pago -->
+        <div class="border-top pt-4 mb-5">
+            <h5 class="text-dark mb-3"> Datos de Pago - Banco Pichincha</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="content-box">
+                        <h6 class="fw-bold"><i class="fas fa-hashtag me-2"></i>No. de Cuenta</h6>
+                        <p class="text-muted mb-0">2206356318</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="content-box">
+                        <h6 class="fw-bold"><i class="fas fa-id-card me-2"></i> Cédula</h6>
+                        <p class="text-muted mb-0">1726723545</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="content-box">
+                        <h6 class="fw-bold"><i class="fas fa-user me-2"></i> Nombre</h6>
+                        <p class="text-muted mb-0">Sebastián Lasso</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://wa.me/521234567890"
+           class="btn btn-success"
+           target="_blank"
+           style="background-color: #25D366; border-color: #25D366;">
+            <i class="fab fa-whatsapp me-2"></i> WhatsApp
+        </a>
+
+
+
+
+    </div>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Enroll Student in a Course</h2>
+
+    <form id="enrollmentForm">
+        <div class="form-group">
+            <label for="studentId">Select Student</label>
+            <select class="form-control" id="studentId" name="StudentID">
+                <option value="">-- Select --</option>
+                @foreach (var student in ViewBag.Students)
+                {
+                    <option value="@student.StudentID">@student.FirstName @student.LastName</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="courseId">Select Course (NRC)</label>
+            <select class="form-control" id="courseId" name="CourseID">
+                <option value="">-- Select --</option>
+                @foreach (var course in ViewBag.Courses)
+                {
+                    <option value="@course.CourseID">@course.NRCCode - @course.CourseName</option>
+                }
+            </select>
+        </div>
+
+        <div class="text-center">
+            <button type="button" class="btn btn-primary" onclick="registerEnrollment()">
+                Enroll
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/enrollment.js"></script>
+}

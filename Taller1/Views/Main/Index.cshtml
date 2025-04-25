@@ -1,0 +1,301 @@
+﻿@{
+    ViewData["Title"] = "Dashboard Cliente";
+    Layout = "~/Views/Shared/_LayoutCliente.cshtml";
+
+}
+
+
+<!-- Carousel Start -->
+<div class="container-fluid p-0">
+    <div id="header-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="~/Img/copa-balones.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Futbol-Amistad</h4>
+                        <h1 class="display-3 text-white mb-md-4">Bienvenidos al Campeonato de InterUrbanizaciones</h1>
+                        <a asp-controller="Main" asp-action="Inscripcion" class="btn btn-primary py-md-3 px-md-5 mt-2">Inscribete ya!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item ">
+                <img class="w-100" src="~/Img/salud-nuts.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Futbol-Amistad</h4>
+                        <h1 class="display-3 text-white mb-md-4">Urbanizaciones que juegan con el corazón</h1>
+                        <a asp-controller="Main" asp-action="Inscripcion" class="btn btn-primary py-md-3 px-md-5 mt-2">Inscribete ya!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="~/Img/retamas-campeones.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Premios-Emociones</h4>
+                        <h1 class="display-3 text-white mb-md-4">Corónate con el Campeonato</h1>
+                        <a asp-controller="Main" asp-action="Inscripcion" class="btn btn-primary py-md-3 px-md-5 mt-2">Inscribete ya!</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="~/Img/partido-inaugural.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <h4 class="text-white text-uppercase mb-md-3">Honor-Respeto</h4>
+                        <h1 class="display-3 text-white mb-md-4">El honor de tú conjunto está en juego!</h1>
+                        <a asp-controller="Main" asp-action="Inscripcion" class="btn btn-primary py-md-3 px-md-5 mt-2">Inscribete ya!</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-prev-icon mb-n2"></span>
+            </div>
+        </a>
+        <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+            <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                <span class="carousel-control-next-icon mb-n2"></span>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- Carousel End -->
+
+
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-6" style="min-height: 500px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute w-100 h-100" src="https://i.pinimg.com/1200x/68/b7/7f/68b77f1a5849278228da7c4658eaf40c.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 pt-5 pb-lg-5">
+                <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Acerca de Nosotros</h6>
+                    <h1 class="mb-3">Campeonato de InterUrbanizaciones</h1>
+                    <p class="text-justify">
+                        Somos los organizadores de parte de la Urbanizacion Terranova encargados del Campeonato de Interurbanizaciones , un torneo creado para unir urbanizaciones y conjuntos a través del fútbol.
+                    </p>
+                    <p class="text-justify">
+
+                        Nuestro objetivo es fomentar la sana competencia, el respeto y el compañerismo entre los equipos participantes, en un ambiente familiar y deportivo.
+                    
+                        Cada edición buscamos mejorar, aprender de la experiencia y ofrecer un campeonato más organizado y emocionante para todos.
+                    </p>
+                    <p>
+                        ¡Gracias por ser parte de este torneo y hacerlo posible!
+                    </p>
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <img class="img-fluid" src="~/Img/flores-del-valle.jpg" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid" src="~/Img/bandidos.jpg" alt="">
+                        </div>
+                    </div>
+                    <a class="btn btn-primary mt-1" asp-controller="Main" asp-action="Inscripcion">Inscríbete!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<div class="container my-5">
+    <h2 class="text-center mb-4"> Centro de Estadísticas del Campeonato</h2>
+
+    <div class="estadisticas-grid">
+        <!-- Partidos -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Main/GalardonPremios'">
+            <i class="fas fa-trophy text-warning icono-estadistica"></i>
+            <h5 class="fw-bold">Premios y Campeones</h5>
+            <p class="text-muted">Consulta todos los premios y campeones de ediciones pasadas</p>
+        </div>
+
+        <!-- Partidos -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/Partidos'">
+            <i class="fas fa-calendar-check text-primary icono-estadistica"></i>
+            <h5 class="fw-bold">Partidos</h5>
+            <p class="text-muted">Consulta todos los partidos y su programación</p>
+        </div>
+
+        <!-- Resultados -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/Resultados'">
+            <i class="fas fa-flag-checkered text-success icono-estadistica"></i>
+            <h5 class="fw-bold">Resultados</h5>
+            <p class="text-muted">Resumen de partidos finalizados y estadísticas</p>
+        </div>
+
+        <!-- Goleadores -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/Goleadores'">
+            <i class="fas fa-futbol text-danger icono-estadistica"></i>
+            <h5 class="fw-bold">Goleadores</h5>
+            <p class="text-muted">Jugadores con más goles del campeonato</p>
+        </div>
+
+        <!-- Tarjetas -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/Tarjetas'">
+            <i class="fas fa-square text-warning icono-estadistica"></i>
+            <h5 class="fw-bold">Tarjetas</h5>
+            <p class="text-muted">Estadísticas de tarjetas amarillas y rojas</p>
+        </div>
+
+        <!-- Tabla de posiciones -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/TablaPosiciones'">
+            <i class="fas fa-list-ol text-info icono-estadistica"></i>
+            <h5 class="fw-bold">Tabla de Posiciones</h5>
+            <p class="text-muted">Clasificación por grupos y desempeño</p>
+        </div>
+
+        <!-- Reglamento -->
+        <div class="card card-estadistica text-center p-4 bg-light" onclick="location.href='/Estadisticas/Reglamento'">
+            <i class="fas fa-book text-warning icono-estadistica"></i>
+            <h5 class="fw-bold">Reglamento</h5>
+            <p class="text-muted">Consulta las normas y reglas del campeonato</p>
+        </div>
+
+        <a href="https://wa.me/593980550502" target="_blank" class="text-decoration-none">
+            <div class="card card-estadistica text-center p-4 bg-light">
+                <i class="fab fa-whatsapp text-success icono-estadistica"></i>
+                <h5 class="fw-bold">Contáctanos!</h5>
+                <p class="text-muted">Un organizador te ayudará con tu inscripción o cualquier duda que tengas</p>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+<!-- Sedes del Campeonato Start -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Sedes</h6>
+            <h1 class="mb-4">Conoce las sedes oficiales del campeonato</h1>
+            <p class="text-muted">Explora los escenarios donde se vivirán las emociones del fútbol interurbanizaciones.</p>
+        </div>
+
+        <div class="row">
+            <!-- Sede 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white shadow-sm rounded">
+                    <img class="img-fluid rounded-top" src="~/Img/cancha-terranova.jpg" alt="Sede 1">
+                    <div class="p-4">
+                        <h5 class="text-dark fw-bold mb-2">Cancha Principal - Terranova</h5>
+                        <p class="text-muted mb-3">La sede principal del campeonato y lugar donde se vivirá la gran final.</p>
+
+                        <div class="d-flex justify-content-between mb-3 text-muted">
+                            <small><i class="fa fa-calendar-alt text-primary me-2"></i> Del 15 Mar al 20 Abr</small>
+                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Capelo</small>
+                        </div>
+
+                        <div class="border-top pt-3 mt-3 d-flex justify-content-between align-items-center">
+                            <span><i class="fa fa-users text-primary mr-2"></i> 7 vs 7</span>
+                            <a href="https://maps.app.goo.gl/kPf7Xe2qka5H91uh7" class="btn btn-outline-primary btn-sm rounded-pill">
+                                <i class="fa fa-map-marker-alt me-1"></i>Ubicación
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sede 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white shadow-sm rounded">
+                    <img class="img-fluid rounded-top" src="~/Img/urb-arupos.jpg" alt="Sede 2">
+                    <div class="p-4">
+                        <h5 class="text-dark fw-bold mb-2">Parque Deportivo Los Arupos</h5>
+                        <p class="text-muted mb-3">Zona recreativa con múltiples canchas, ideal para encuentros masivos.</p>
+
+                        <div class="d-flex justify-content-between mb-3 text-muted">
+                            <small><i class="fa fa-calendar-alt text-primary me-2"></i> Del 5 Abr al 10 May</small>
+                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Capelo</small>
+                        </div>
+
+                        <div class="border-top pt-3 mt-3 d-flex justify-content-between align-items-center">
+                            <span><i class="fa fa-users text-primary mr-2"></i> 7 vs 7</span>
+                            <a href="https://maps.app.goo.gl/kPf7Xe2qka5H91uh7" class="btn btn-outline-primary btn-sm rounded-pill">
+                                <i class="fa fa-map-marker-alt me-1"></i>Ubicación
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sede 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="package-item bg-white shadow-sm rounded">
+                    <img class="img-fluid rounded-top" src="https://i.pinimg.com/1200x/cc/bd/29/ccbd295853a5a99fa0bd9ea3ed55467a.jpg" alt="Sede 3">
+                    <div class="p-4">
+                        <h5 class="text-dark fw-bold mb-2">Estadio Deportivo Sol del Valle</h5>
+                        <p class="text-muted mb-3">Uno de los estadios más modernos con cancha sintética e iluminación nocturna.</p>
+
+                        <div class="d-flex justify-content-between mb-3 text-muted">
+                            <small><i class="fa fa-calendar-alt text-primary me-2"></i> Del 10 May al 5 Jun</small>
+                            <small class="m-0"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Capelo</small>
+                            
+                        </div>
+
+                        <div class="border-top pt-3 mt-3 d-flex justify-content-between align-items-center">
+                            <span><i class="fa fa-users text-primary mr-2"></i> 7 vs 7</span>
+                            <a href="https://maps.app.goo.gl/kPf7Xe2qka5H91uh7" class="btn btn-outline-primary btn-sm rounded-pill">
+                                <i class="fa fa-map-marker-alt me-1"></i>Ubicación
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sedes del Campeonato End -->
+
+<div class="container-fluid py-5 bg-light">
+    <div class="container pt-5 pb-3">
+        <div class="text-center mb-5">
+            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Valores</h6>
+            <h1>Comprometidos con un Campeonato Ejemplar</h1>
+        </div>
+
+        <div class="row">
+            <!-- Juego Limpio -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item d-flex flex-column align-items-center justify-content-center bg-white text-center mb-4 shadow-sm py-5 px-4 rounded h-100">
+                    <i class="fa fa-2x fa-handshake text-primary mb-3"></i>
+                    <h5 class="mb-3">Juego Limpio</h5>
+                    <p class="text-muted m-0">Fomentamos el respeto, la justicia y la sana competencia dentro y fuera de la cancha. El espíritu deportivo nos une.</p>
+                </div>
+            </div>
+
+            <!-- Organización Profesional -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item d-flex flex-column align-items-center justify-content-center bg-white text-center mb-4 shadow-sm py-5 px-4 rounded h-100">
+                    <i class="fa fa-2x fa-calendar-check text-primary mb-3"></i>
+                    <h5 class="mb-3">Organización Profesional</h5>
+                    <p class="text-muted m-0">Desde los cronogramas hasta la logística de partidos, garantizamos un torneo bien coordinado y transparente.</p>
+                </div>
+            </div>
+
+            <!-- Seguridad -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="service-item d-flex flex-column align-items-center justify-content-center bg-white text-center mb-4 shadow-sm py-5 px-4 rounded h-100">
+                    <i class="fa fa-2x fa-shield-alt text-primary mb-3"></i>
+                    <h5 class="mb-3">Seguridad para Todos</h5>
+                    <p class="text-muted m-0">Contamos con protocolos de seguridad, personal capacitado y espacios controlados para proteger a jugadores y espectadores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="~/js/usuario.js"></script>
+<script src="~/js/queries.js"></script>

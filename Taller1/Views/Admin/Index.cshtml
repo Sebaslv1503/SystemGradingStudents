@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Register a Student</h2>
+    <form id="formStudent">
+        <div class="form-group">
+            <label for="name">First Name</label>
+            <input type="text" class="form-control" id="name" name="Name" required />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" id="lastName" name="LastName" required />
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" required />
+        </div>
+        <div class="text-center mt-4">
+            <button type="button" class="btn btn-primary" onclick="registrarEstudiante()">
+                <i class="fas fa-user-plus me-2"></i> Registrar
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/student.js"></script>
+}
